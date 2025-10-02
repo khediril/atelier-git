@@ -1,8 +1,3 @@
-Absolument \! Voici la version de cet atelier guidé en format **Markdown**, parfaitement adapté pour être partagé facilement, par exemple dans un document, une plateforme d'apprentissage ou un fichier `README.md`.
-
-Ce plan suit le même objectif : maîtriser le cycle de synchronisation **Labo $\to$ GitHub $\to$ Maison** pour un projet personnel.
-
------
 
 # 🛠️ Atelier Guidé : Git & GitHub pour la Synchronisation Personnelle
 
