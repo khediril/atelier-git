@@ -1,0 +1,159 @@
+Absolument \! Voici la version de cet atelier guidé en format **Markdown**, parfaitement adapté pour être partagé facilement, par exemple dans un document, une plateforme d'apprentissage ou un fichier `README.md`.
+
+Ce plan suit le même objectif : maîtriser le cycle de synchronisation **Labo $\to$ GitHub $\to$ Maison** pour un projet personnel.
+
+-----
+
+# 🛠️ Atelier Guidé : Git & GitHub pour la Synchronisation Personnelle
+
+## Introduction : Le Pourquoi (5 min)
+
+L'objectif est d'utiliser **GitHub** comme un "coffre-fort" intelligent et un point de synchronisation central pour votre projet.
+
+  * **Git :** Le logiciel de contrôle de version qui gère l'historique de votre code **localement** (sur votre PC).
+  * **GitHub :** La plateforme sur le cloud qui héberge votre code **à distance** et permet la synchronisation.
+
+-----
+
+## ÉTAPE 0 : Préparation (15 min)
+
+### 1\. Configuration Initiale
+
+**Question :** Comment Git sait-il qui a fait les changements ?
+
+**Action :** Ouvrez votre terminal (ou Git Bash) et configurez votre identité (à faire une seule fois par ordinateur) :
+
+```bash
+git config --global user.name "Votre Prénom et Nom"
+git config --global user.email "votre.email@fac.com"
+```
+
+### 2\. Création du Dépôt Distant (sur GitHub)
+
+**Question :** Où votre travail sera-t-il stocké en ligne ?
+
+**Action :** Allez sur le site de GitHub :
+
+1.  Créez un **Nouveau Repository** (Dépôt).
+2.  Choisissez un nom pertinent (ex: `projet-semestre-1`).
+3.  Laissez les options **README** et **.gitignore** **décochées**.
+4.  Cliquez sur **Create Repository**.
+5.  **Gardez l'URL HTTPS du dépôt** ouverte (vous en aurez besoin).
+
+-----
+
+## PARTIE 1 : Démarrage au Labo et Premier Envoi (20 min)
+
+### 1\. Initialisation du Projet Local
+
+**Question :** Comment transformer votre dossier de travail en dépôt Git ?
+
+**Action :** Dans votre terminal, créez le dossier du projet et activez Git à l'intérieur :
+
+```bash
+# Crée le dossier et y navigue
+mkdir mon-projet-fac
+cd mon-projet-fac
+
+# Active le suivi Git local
+git init
+```
+
+### 2\. La Première Sauvegarde
+
+**Question :** Comment enregistrer un premier instantané du travail ?
+
+**Action :**
+
+1.  Créez votre premier fichier de code (ex: `index.html` ou `main.py`).
+2.  Ajoutez tous les fichiers pour la préparation :
+    ```bash
+    git add .
+    ```
+3.  Enregistrez l'instantané (**commit**) avec un message clair :
+    ```bash
+    git commit -m "Initial commit du projet"
+    ```
+
+### 3\. Connexion et Envoi (Push)
+
+**Question :** Comment envoyer cette première sauvegarde sur GitHub ?
+
+**Action :**
+
+1.  Liez votre dépôt local à l'adresse distante (`origin` étant le nom standard) :
+    ```bash
+    git remote add origin [COLLER L'URL HTTPS DE GITHUB ICI]
+    ```
+2.  Envoyez l'historique sur la branche principale (`main`) :
+    ```bash
+    git push -u origin main
+    ```
+    *🎉 **Succès \!** Votre projet est en ligne.*
+
+-----
+
+## PARTIE 2 : Reprendre le Travail (À la Maison ou Ailleurs) (15 min)
+
+### Scénario A : Première fois sur une nouvelle machine
+
+**Question :** Comment récupérer le projet complet pour la première fois à la maison ?
+
+**Action :** Sur le nouvel ordinateur, téléchargez le projet en utilisant la commande **`clone`** :
+
+```bash
+# Télécharge et crée le dossier 'mon-projet-fac'
+git clone [COLLER L'URL HTTPS DE GITHUB ICI]
+
+# Entrez dans le nouveau dossier
+cd mon-projet-fac
+```
+
+### Scénario B : La Routine Quotidienne (Synchronisation)
+
+**Cette routine doit être faite à chaque fois que vous changez de lieu de travail.**
+
+#### Étape A : Récupérer le Dernier Travail
+
+**Question :** Comment s'assurer d'avoir la version la plus récente avant de commencer ?
+
+**Action :** **Avant de toucher au code**, tirez les changements de GitHub :
+
+```bash
+git pull
+```
+
+#### Étape B : Travailler, Sauvegarder, Renvoyer
+
+**Question :** Après avoir fait des modifications, comment les mettre à jour en ligne ?
+
+**Action :** Répétez ce cycle :
+
+1.  Travaillez sur vos fichiers (éditeur).
+2.  Préparez les changements :
+    ```bash
+    git add .
+    ```
+3.  Sauvegardez l'instantané local :
+    ```bash
+    git commit -m "Ajout de la fonction de calcul de moyenne"
+    ```
+4.  Renvoyez le tout sur GitHub :
+    ```bash
+    git push
+    ```
+    *✅ Le cycle est complet. Le travail est mis à jour pour votre prochaine session.*
+
+-----
+
+## RÉCAPITULATIF : Les 5 Commandes Vitales
+
+Mémorisez ce flux simple pour votre synchronisation personnelle :
+
+| Situation | Commande à utiliser | Objectif |
+| :--- | :--- | :--- |
+| **Démarrer un nouveau dépôt local.** | `git init` | Créer la base de suivi Git. |
+| **Passer à une nouvelle machine.** | `git clone [URL]` | Télécharger le projet entier de GitHub. |
+| **Avant de commencer à coder.** | **`git pull`** | Récupérer les dernières modifications faites ailleurs. |
+| **Préparer les fichiers modifiés.** | `git add .` | Mettre les fichiers dans la zone de préparation. |
+| **Enregistrer et partager le travail.** | `git commit -m "Msg"` **puis** `git push` | Sauvegarder localement, puis envoyer sur GitHub. |
