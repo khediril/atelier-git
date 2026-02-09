@@ -1,7 +1,3 @@
-Absolument ! Voici de nouveau le TP détaillé et guidé pour l'utilisation de Git et GitHub, conçu spécifiquement pour deux étudiants collaborant sur le développement d'une application.
-
----
-
 # TP Git & GitHub pour Débutants : Collaboration à Deux
 
 ## Scénario : Développement d'une Application Simple
@@ -498,7 +494,7 @@ Maintenant, l'Étudiant B va créer sa PR.
 
 ## Conclusion et Bonnes Pratiques
 
-Félicitations ! Vous avez réalisé un TP complet sur la collaboration Git/GitHub, incluant la gestion des branches, des Pull Requests et la résolution de conflits.
+
 
 Voici quelques bonnes pratiques à retenir :
 
